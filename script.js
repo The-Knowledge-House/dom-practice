@@ -21,7 +21,7 @@ window.onload = function (event) {
   // Part 1
   const shortTitle = () => {
     let title = document.querySelector('#main-title');
-    title.innerText = "Dom Toretto's Homepage";
+    title.innerText = "I-Drive-Fast-Cars.exe";
   }
 
   shortTitle();
