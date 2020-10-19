@@ -7,11 +7,10 @@ let quotes = [
   `It don't matter if you win by an inch or a mile. Winning's winning.`,
 ];
 
-window.onload =  function(event) {
-  
+window.onload = function (event) {
   // Random quote of the day generator
-  const randomQuote = function() {
-    document.querySelector('#quote-of-the-day').textContent = `"${
+  const randomQuote = function () {
+    document.querySelector("#quote-of-the-day").textContent = `"${
       quotes[Math.floor(Math.random() * quotes.length)]
     }"`;
   };
@@ -20,6 +19,15 @@ window.onload =  function(event) {
   // Do all of your work inside the window.onload function (in other words, here!)
 
   // Part 1
+  titleEdit = function () {
+    document.getElementById("main-title").innerHTML =
+      "Hey this is DOM. Welcome to my page.";
+  };
+  titleEdit();
+  familyEdit = function () {
+    document.getElementById("family-list").innerHTML = "My family";
+  };
+  familyEdit();
 
   // Part 2
 
@@ -32,4 +40,4 @@ window.onload =  function(event) {
   // Part 6
 
   // Part 7
-}
+};
