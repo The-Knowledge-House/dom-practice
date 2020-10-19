@@ -16,8 +16,6 @@ window.onload = function (event) {
   };
   randomQuote();
 
-  // Do all of your work inside the window.onload function (in other words, here!)
-
   // Part 1
   const shortTitle = () => {
     let title = document.querySelector('#main-title');
