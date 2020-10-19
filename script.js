@@ -1,3 +1,5 @@
+// quotes lsit
+
 let quotes = [
   `I live my life a quarter mile at a time`,
   `I said a ten-second car, not a ten-minute car`,
@@ -7,6 +9,7 @@ let quotes = [
   `It don't matter if you win by an inch or a mile. Winning's winning.`,
 ];
 
+// when the page loads
 window.onload = function (event) {
 
   // Random quote of the day generator
