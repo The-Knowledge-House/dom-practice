@@ -17,6 +17,7 @@ window.onload = function (event) {
     document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]
       }"`;
   };
+
   randomQuote();
 
   // Part 1
@@ -61,14 +62,13 @@ window.onload = function (event) {
   // Part 5
 
   const noChicago = () => {
-    let items = document.querySelector("#past-races").querySelectorAll("li");
+    let pastRaces = document.querySelector("#past-races").querySelectorAll("li");
 
-    for (item of items) {
+    for (item of pastRaces) {
       if (item.textContent === 'Chicago') {
         item.remove();
       }
     }
-
   }
 
   noChicago();
@@ -90,12 +90,12 @@ window.onload = function (event) {
     let main = document.querySelector('.main')
     let blog = document.createElement('div');
     let blogTitle = document.createElement('h1');
-    blogTitle.innerText = 'Lisbon';
-    let blogP = document.createElement('p');
-    blogP.innerText = 'I WENT TO PORTUGAL AND DROVE A CAR SUPER FAST. BIG WOOP'
-    blog.classList.add('blog-post'), blog.classList.add('purple');
-    blog.append(blogTitle, blogP), main.append(blog);
+    let blogParagraph = document.createElement('p');
 
+    blogTitle.innerText = 'Lisbon';
+    blogParagraph.innerText = 'I WENT TO PORTUGAL AND DROVE A CAR SUPER FAST. BIG WOOP'
+    blog.classList.add('blog-post'), blog.classList.add('purple');
+    blog.append(blogTitle, blogParagraph), main.append(blog);
   }
 
   newBlogPost();
