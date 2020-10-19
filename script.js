@@ -60,7 +60,7 @@ window.onload = function (event) {
 
   // Part 6: Create a new <li> element, change the new <li> text to the name of a city, and append it to the Past Races list.
   addRace = function () {
-    let newCity = document.createElement("LI");
+    let newCity = document.createElement("li");
     let cityText = document.createTextNode("Mývatn Lake");
     newCity.appendChild(cityText);
     document.getElementById("past-races").appendChild(newCity);
@@ -70,4 +70,23 @@ window.onload = function (event) {
   // Part 7: Create a new .blog-post corresponding to the new city added in Part 6.
   // You will have to create a new < div > with class of .blog - post, a new < h1 > with text, and a new < p > with some text.
   // Make the new element consistent with the other posts.
+  newPost = function () {
+    let postDiv = document.createElement("div");
+    postDiv.classList.add("blog-post", "purple");
+
+    let postHeading = document.createElement("h1");
+    let htext = document.createTextNode("Mývatn Lake");
+    postHeading.appendChild(htext);
+    postDiv.appendChild(postHeading);
+
+    let postParagragh = document.createElement("p");
+    let ptext = document.createTextNode(
+      "Had an explosive race over a frozen lake!"
+    );
+    postParagragh.appendChild(ptext);
+    postDiv.appendChild(postParagragh);
+
+    document.querySelector(".main").appendChild(postDiv);
+  };
+  newPost();
 };
