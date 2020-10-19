@@ -20,6 +20,7 @@ window.onload = function (event) {
   randomQuote();
 
   // Part 1
+
   const shortTitle = () => {
     let title = document.querySelector('#main-title');
     title.innerText = "I-Drive-Fast-Cars.exe";
