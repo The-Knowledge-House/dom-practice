@@ -18,26 +18,49 @@ window.onload = function (event) {
 
   // Do all of your work inside the window.onload function (in other words, here!)
 
-  // Part 1
+  // Part 1: Write a JavaScript statement that selects the #main-title ID element.
   titleEdit = function () {
-    document.getElementById("main-title").innerHTML =
-      "Hey this is DOM. Welcome to my page.";
+    let mainTitle = document.getElementById("main-title");
+    let familyList = document.getElementById("family-list");
+    mainTitle.innerHTML = "Hey, this is DOM. <br> Welcome to my page.";
+    mainTitle.style.fontSize = "4vw";
+    familyList.innerHTML = "My family";
   };
   titleEdit();
-  familyEdit = function () {
-    document.getElementById("family-list").innerHTML = "My family";
+
+  // Part 2: Select the body and change the background-color to a new color of your choice.
+  colorChange = function () {
+    document.body.style.background =
+      "linear-gradient(to top left, #d00b07, #e2620f)";
   };
-  familyEdit();
+  colorChange();
 
-  // Part 2
+  // Part 3: Select DOM's Favorite Things list and remove the last list item.
+  favoriteEdit = function () {
+    favThings = document.getElementById("favorite-things");
+    favThings.removeChild(favThings.lastElementChild);
+  };
+  favoriteEdit();
 
-  // Part 3
+  // Part 4: Select all .special-title class elements and change their font-size to 2rem.
+  fontChange = function () {
+    let special = document.getElementsByClassName("special-title");
+    for (let i = 0; i < special.length; i++) {
+      let special = special[i];
+      special.style.fontSize = "2rem";
+    }
+  };
 
-  // Part 4
+  // Part 5: Access the Past Races list and remove Chicago.
+  racesEdit = function () {
+    pstRaces = document.getElementById("past-races");
+    pstRaces.removeChild(pstRaces.childNodes[7]);
+  };
+  racesEdit();
 
-  // Part 5
+  // Part 6: Create a new <li> element, change the new <li> text to the name of a city, and append it to the Past Races list.
 
-  // Part 6
-
-  // Part 7
+  // Part 7: Create a new .blog-post corresponding to the new city added in Part 6.
+  // You will have to create a new < div > with class of .blog - post, a new < h1 > with text, and a new < p > with some text.
+  // Make the new element consistent with the other posts.
 };
