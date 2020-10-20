@@ -7,13 +7,12 @@ let quotes = [
   `It don't matter if you win by an inch or a mile. Winning's winning.`,
 ];
 
-window.onload =  function(event) {
-  
+window.onload = function (event) {
+
   // Random quote of the day generator
-  const randomQuote = function() {
-    document.querySelector('#quote-of-the-day').textContent = `"${
-      quotes[Math.floor(Math.random() * quotes.length)]
-    }"`;
+  const randomQuote = function () {
+    document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]
+      }"`;
   };
   randomQuote();
 
@@ -21,15 +20,69 @@ window.onload =  function(event) {
 
   // Part 1
 
+  document.querySelector("#main-title").innerHTML = "I am DOM Toretto";
+
   // Part 2
+
+  document.querySelector("body").style.backgroundColor = "#F0E6FF";
 
   // Part 3
 
+  function things() {
+    favoriteThings = document.getElementById("favorite-things");
+    favoriteThings.removeChild(favoriteThings.lastElementChild);
+  };
+  things();
+
+
   // Part 4
+
+  function fontSize() {
+    let title = document.getElementsByClassName('special-title');
+    for (let i = 0; i < title.length; i++) {
+      let titles = title[i]
+      titles.style.size = "2rem";
+    }
+  }
+  fontSize();
+
 
   // Part 5
 
+  function races() {
+    pastRaces = document.getElementById("past-races");
+    pastRaces.removeChild(pastRaces.childNodes[7]);
+  };
+  races();
+
   // Part 6
 
+  let newPlace = document.createElement("li");
+  let text = document.createTextNode("Dominican Republic");
+  newPlace.appendChild(text);
+  document.querySelector(`#past-races`).appendChild(newPlace);
+
   // Part 7
+
+
+  function addBlogPost() {
+    let createDiv = document.createElement("div");
+    createDiv.classList.add('blog-post', 'purple');
+    console.log(createDiv);
+
+    let textContent = document.createTextNode("Puerto Rico");
+    let createHeader = document.createElement("h1")
+    createHeader.appendChild(textContent);
+    createDiv.appendChild(createHeader);
+
+    let createP = document.createElement("p");
+    let text = document.createTextNode("DRIVING BY THE BEACH!")
+    createP.appendChild(text);
+    createDiv.appendChild(createP);
+
+
+    document.getElementsByClassName("main")[0].appendChild(createDiv);
+  }
+  addBlogPost();
+
 }
