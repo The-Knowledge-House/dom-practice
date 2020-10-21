@@ -20,12 +20,36 @@ window.onload =  function(event) {
   // Do all of your work inside the window.onload function (in other words, here!)
 
   // Part 1
+function titleChange() {
+  let mainTitle = document.getElementById("main-title");
+  mainTitle.innerHTML = "Welcome, I am DOM"
+}
+titleChange();
 
   // Part 2
+function colorChange() {
+  document.querySelector(`body`).style.background = "#98FB98";
+}
+colorChange();
 
   // Part 3
 
+  function changeFavorite() {
+    let list = document.querySelector(`favorite-things`)
+    list.removeChild(list.lastElementChild);
+  }
+  changeFavorite();
+
   // Part 4
+
+  function changeSize() {
+    let special = document.getElementsByClassName(`special-title`);
+    for (let i = 0; i < special.length; i++) {
+      let special = special[i];
+      special.style.fontsize = "2rem";
+    }
+  }
+  changeSize();
 
   // Part 5
 
