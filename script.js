@@ -23,11 +23,14 @@ window.onload =  function(event) {
   function changeMainTitle() {
     let newMainTitle = document.getElementById("main-title");
     newMainTitle.innerHTML = "Welcome to Dom Toretto's Homepage";
-
   }
   changeMainTitle()
-  
+
   // Part 2
+  function changeBackgroundColor() {
+    document.body.style.backgroundColor = "#E9967A";
+  }
+  changeBackgroundColor()
 
   // Part 3
 
