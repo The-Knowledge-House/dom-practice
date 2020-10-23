@@ -53,7 +53,38 @@ colorChange();
 
   // Part 5
 
+function changeItem() {
+  let list = document.getElementById(`past-races`);
+  list.removeChild(list.childNodes[7]);
+}
+changeItem();
+  
   // Part 6
 
+  function addCity(){
+
+    let node = document.createElement("li");
+    let textNode = document.createTextNode("Bronx");
+    node.appendChild(textNode);
+    document.getElementById("past-races").appendChild(node);
+};
+addCity();
+
   // Part 7
+
+  function blogPost() {
+    let div = document.createElement(`div`);
+    let header = document.createElement(`h1`);
+    let paragraph = document.createElement(`p`);
+    let main = document.createElement(`.main`);
+
+    header.innerText = `The Bronx`;
+    paragraph.innerText = `I drifted past Yankee Stadium in my Maserati MC20 in the Boogie Down Bronx`;
+    div.classList.add(`blog-post`);
+    div.classList.add(`purple`); 
+    div.append(header, paragraph);
+    main.append(div);
+  }
+  blogPost();
+
 }
