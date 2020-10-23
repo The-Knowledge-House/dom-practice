@@ -20,7 +20,13 @@ window.onload =  function(event) {
   // Do all of your work inside the window.onload function (in other words, here!)
 
   // Part 1
+  function changeMainTitle() {
+    let newMainTitle = document.getElementById("main-title");
+    newMainTitle.innerHTML = "Welcome to Dom Toretto's Homepage";
 
+  }
+  changeMainTitle()
+  
   // Part 2
 
   // Part 3
