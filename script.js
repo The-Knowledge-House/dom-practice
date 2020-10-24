@@ -7,13 +7,12 @@ let quotes = [
   `It don't matter if you win by an inch or a mile. Winning's winning.`,
 ];
 
-window.onload =  function(event) {
+window.onload = function (event) {
   
   // Random quote of the day generator
-  const randomQuote = function() {
-    document.querySelector('#quote-of-the-day').textContent = `"${
-      quotes[Math.floor(Math.random() * quotes.length)]
-    }"`;
+  const randomQuote = function () {
+    document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]
+      }"`;
   };
   randomQuote();
 
@@ -51,8 +50,23 @@ window.onload =  function(event) {
   classChangeFontSize()
 
   // Part 5
+  // function removeARace() {
+  //   let thePastRaces = document.getElementById("past-races");
+  //   let pastChicagoRace = document.querySelector('ul li:nth-child(3)');
+  //   thePastRaces.removeChild(pastChicagoRace);
+  //   }
+  //   removeARace()
 
   // Part 6
+  function addARace() {
+    let newRaceListElement = document.createElement('li');
+
+    newRaceListElement.innerHTML = "Nairobi";
+
+    document.getElementById("past-races").appendChild(newRaceListElement);
+
+  }
+  addARace()
 
   // Part 7
 }
