@@ -50,18 +50,22 @@ window.onload = function (event) {
   classChangeFontSize()
 
   // Part 5
-  // function removeARace() {
-  //   let thePastRaces = document.getElementById("past-races");
-  //   let pastChicagoRace = document.querySelector('ul li:nth-child(3)');
-  //   thePastRaces.removeChild(pastChicagoRace);
-  //   }
-  //   removeARace()
+  function removeFalseChicagoRace() {
+    let thePastRaces = document.getElementById("past-races").childNodes;
+    
+    for (let thePastRace of thePastRaces) {
+      if (thePastRace.textContent === "Chicago") {
+        thePastRace.remove();
+      }
+    }
+  }
+  removeFalseChicagoRace()
 
   // Part 6
   function addARace() {
     let newRaceListElement = document.createElement('li');
 
-    newRaceListElement.innerHTML = "Nairobi";
+    newRaceListElement.innerHTML = "Berlin";
 
     document.getElementById("past-races").appendChild(newRaceListElement);
 
@@ -69,4 +73,22 @@ window.onload = function (event) {
   addARace()
 
   // Part 7
+  function newRaceCityBlogPost() {
+    let main = document.querySelector(".main")
+    let newBlogArea = document.createElement("div");
+    let newBlogHeading = document.createElement("h1");
+    let newBlogParText = document.createElement("p");
+  
+    newBlogArea.className = "blog-post purple";
+    // newBlogHeading.color = FFF;
+    newBlogHeading.textContent = "Berlin";
+    newBlogParText.textContent = "Ended up in Berlin speeding down the Autobahn!";
+    
+    main.appendChild(newBlogArea);
+    main.appendChild(newBlogHeading);
+    main.appendChild(newBlogParText);   
+  }
+
+  newRaceCityBlogPost()
+
 }
