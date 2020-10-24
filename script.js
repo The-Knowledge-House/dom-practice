@@ -33,8 +33,16 @@ window.onload =  function(event) {
   changeBackgroundColor()
 
   // Part 3
-
+  function removeLastFavorite() {
+    let myList = document.querySelector('ul');
+    let lastListItem = document.querySelector('li:last-child');
+    myList.removeChild(lastListItem);
+  }
+  removeLastFavorite()
+  
   // Part 4
+  // let firstHeading = document.getElementById('firstHeading');
+
 
   // Part 5
 
