@@ -75,18 +75,17 @@ window.onload = function (event) {
   // Part 7
   function newRaceCityBlogPost() {
     let main = document.querySelector(".main")
-    let newBlogArea = document.createElement("div");
+    let newBlog = document.createElement("div");
     let newBlogHeading = document.createElement("h1");
     let newBlogParText = document.createElement("p");
-  
-    newBlogArea.className = "blog-post purple";
-    // newBlogHeading.color = FFF;
+    
+    newBlog.className = "blog-post purple";
     newBlogHeading.textContent = "Berlin";
     newBlogParText.textContent = "Ended up in Berlin speeding down the Autobahn!";
-    
-    main.appendChild(newBlogArea);
-    main.appendChild(newBlogHeading);
-    main.appendChild(newBlogParText);   
+
+    newBlog.append(newBlogHeading, newBlogParText);
+    main.append(newBlog);
+
   }
 
   newRaceCityBlogPost()
