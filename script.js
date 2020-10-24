@@ -21,23 +21,31 @@ window.onload = function (event) {
   // Part 1
   function changeMainTitle() {
     let newMainTitle = document.getElementById("main-title");
+
     newMainTitle.innerHTML = "Welcome to Dom Toretto's Homepage";
-  }
+  };
+
   changeMainTitle()
+
 
   // Part 2
   function changeBackgroundColor() {
     document.body.style.backgroundColor = "#E9967A";
-  }
+  };
+
   changeBackgroundColor()
+
 
   // Part 3
   function removeLastFavorite() {
     let myList = document.querySelector('ul');
     let lastListItem = document.querySelector('li:last-child');
+
     myList.removeChild(lastListItem);
-  }
+  };
+
   removeLastFavorite()
+
   
   // Part 4
   function classChangeFontSize() {
@@ -47,7 +55,9 @@ window.onload = function (event) {
       specialTitleElements[i].style.fontSize = "2rem";
     }
   };
+
   classChangeFontSize()
+
 
   // Part 5
   function removeFalseChicagoRace() {
@@ -58,8 +68,10 @@ window.onload = function (event) {
         thePastRace.remove();
       }
     }
-  }
+  };
+
   removeFalseChicagoRace()
+
 
   // Part 6
   function addARace() {
@@ -69,7 +81,8 @@ window.onload = function (event) {
 
     document.getElementById("past-races").appendChild(newRaceListElement);
 
-  }
+  };
+
   addARace()
 
   // Part 7
@@ -86,7 +99,7 @@ window.onload = function (event) {
     newBlog.append(newBlogHeading, newBlogParText);
     main.append(newBlog);
 
-  }
+  };
 
   newRaceCityBlogPost()
 
