@@ -41,8 +41,14 @@ window.onload =  function(event) {
   removeLastFavorite()
   
   // Part 4
-  // let firstHeading = document.getElementById('firstHeading');
+  function classChangeFontSize() {
+    let specialTitleElements = document.getElementsByClassName("special-title");
 
+    for (let i = 0; i < specialTitleElements.length; i++) {
+      specialTitleElements[i].style.fontSize = "2rem";
+    }
+  };
+  classChangeFontSize()
 
   // Part 5
 
