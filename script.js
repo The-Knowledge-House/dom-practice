@@ -20,11 +20,10 @@ window.onload = function (event) {
 
   // Part 1: Write a JavaScript statement that selects the #main-title ID element.
   titleEdit = function () {
-    let mainTitle = document.getElementById("main-title");
-    let familyList = document.getElementById("family-list");
-    mainTitle.innerHTML = "Hey, this is DOM. <br> Welcome to my page.";
-    mainTitle.style.fontSize = "4vw";
-    familyList.innerHTML = "My family";
+    document.getElementById("main-title").innerText = `Hey, this is DOM.
+      Welcome to my page.`;
+    document.getElementById("family-list").innerText = `My family`;
+    document.getElementById("main-title").style.fontSize = `4vw`;
   };
   titleEdit();
 
