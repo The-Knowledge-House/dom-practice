@@ -27,10 +27,10 @@ function titleChange() {
 titleChange();
 
   // Part 2
-function colorChange() {
+  function colorChange() {
   document.querySelector(`body`).style.background = "#98FB98";
-}
-colorChange();
+  }
+  colorChange();
 
   // Part 3
 
@@ -54,8 +54,10 @@ colorChange();
   // Part 5
 
 function changeItem() {
-  let list = document.getElementById(`past-races`);
-  list.removeChild(list.childNodes[7]);
+  let list = document.getElementById('past-races');
+  let item = list.childNodes[7];
+
+  list.removeChild(item)
 }
 changeItem();
   
@@ -63,27 +65,31 @@ changeItem();
 
   function addCity(){
 
-    let node = document.createElement("li");
-    let textNode = document.createTextNode("Bronx");
-    node.appendChild(textNode);
-    document.getElementById("past-races").appendChild(node);
-};
-addCity();
+    const newItem = document.createElement('LI');
+    let text = document.createTextNode("Bronx");
+    newItem.appendChild(text);
+
+    document.getElementById('past-races').appendChild(newItem);
+  }
+  
+  addCity();
 
   // Part 7
 
   function blogPost() {
-    let div = document.createElement(`div`);
-    let header = document.createElement(`h1`);
-    let paragraph = document.createElement(`p`);
-    let main = document.createElement(`.main`);
+    let div = document.createElement('div');
+    let header = document.createElement('h1');
+    let paragraph = document.createElement('p');
+  
+    header.textContent = 'The Bronx'
+    paragraph.textContent = 'I drifted past Yankee Stadium in my Maserati MC20 in the Boogie Down Bronx';
+    div.className = 'blog-post purple'
+    div.appendChild(header);
+    div.appendChild(paragraph);
 
-    header.innerText = `The Bronx`;
-    paragraph.innerText = `I drifted past Yankee Stadium in my Maserati MC20 in the Boogie Down Bronx`;
-    div.classList.add(`blog-post`);
-    div.classList.add(`purple`); 
-    div.append(header, paragraph);
-    main.append(div);
+    let main = document.querySelector('.main')
+    main.appendChild(div)
+    
   }
   blogPost();
 
