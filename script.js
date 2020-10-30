@@ -20,16 +20,77 @@ window.onload =  function(event) {
   // Do all of your work inside the window.onload function (in other words, here!)
 
   // Part 1
+function titleChange() {
+  let mainTitle = document.getElementById("main-title");
+  mainTitle.innerHTML = "Welcome, I am DOM"
+}
+titleChange();
 
   // Part 2
+  function colorChange() {
+  document.querySelector(`body`).style.background = "#98FB98";
+  }
+  colorChange();
 
   // Part 3
 
+  function changeFavorite() {
+    let list = document.getElementById(`favorite-things`)
+    list.removeChild(list.lastElementChild);
+  }
+  changeFavorite();
+
   // Part 4
+
+  function changeSize() {
+    let special = document.getElementsByClassName(`special-title`);
+    for (let i = 0; i < special.length; i++) {
+      special = special[i];
+      special.style.fontsize = "2rem";
+    }
+  }
+  changeSize();
 
   // Part 5
 
+function changeItem() {
+  let list = document.getElementById('past-races');
+  let item = list.childNodes[7];
+
+  list.removeChild(item)
+}
+changeItem();
+  
   // Part 6
 
+  function addCity(){
+
+    const newItem = document.createElement('LI');
+    let text = document.createTextNode("Bronx");
+    newItem.appendChild(text);
+
+    document.getElementById('past-races').appendChild(newItem);
+  }
+  
+  addCity();
+
   // Part 7
+
+  function blogPost() {
+    let div = document.createElement('div');
+    let header = document.createElement('h1');
+    let paragraph = document.createElement('p');
+  
+    header.textContent = 'The Bronx'
+    paragraph.textContent = 'I drifted past Yankee Stadium in my Maserati MC20 in the Boogie Down Bronx';
+    div.className = 'blog-post purple'
+    div.appendChild(header);
+    div.appendChild(paragraph);
+
+    let main = document.querySelector('.main')
+    main.appendChild(div)
+    
+  }
+  blogPost();
+
 }
