@@ -35,7 +35,7 @@ titleChange();
   // Part 3
 
   function changeFavorite() {
-    let list = document.querySelector(`favorite-things`)
+    let list = document.getElementById(`favorite-things`)
     list.removeChild(list.lastElementChild);
   }
   changeFavorite();
@@ -45,7 +45,7 @@ titleChange();
   function changeSize() {
     let special = document.getElementsByClassName(`special-title`);
     for (let i = 0; i < special.length; i++) {
-      let special = special[i];
+      special = special[i];
       special.style.fontsize = "2rem";
     }
   }
