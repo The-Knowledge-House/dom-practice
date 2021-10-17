@@ -8,7 +8,7 @@ let quotes = [
 ];
 
 window.onload = function (event) {
-  
+
   // Random quote of the day generator
   const randomQuote = function () {
     document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]
@@ -20,7 +20,7 @@ window.onload = function (event) {
   // Part 1
   let changeHEader = document.getElementById('main-title');
   changeHEader.textContent = "Fast and Furious stuff";
-  
+
   // Part 2
   document.body.style.backgroundColor = 'lightpink';
 
@@ -44,12 +44,14 @@ window.onload = function (event) {
   // Part 7
   let mainDiv = document.getElementsByClassName('blog-post purple');
   let div = document.createElement('div');
-  //div.className = 'blog-post purple';
   let h1 = document.createElement('h1');
-  h1Text.appendChild(document.createTextNode('New York'));
   let p = document.createElement('p');
-  pText.appendChild(document.createTextNode('I destroyed all of my frineds cars'));
-  document.mainDiv.appendChild(div);
-
+  let color = document.querySelector('.main');
+  div.className = 'blog-post purple';
+  h1.textContent = 'New York';
+  p.textContent = 'I destroyed all of my friends cars wronnn wronnnn!';
+  div.appendChild(h1)
+  div.appendChild(p);
+  color.appendChild(div);
 
 }
