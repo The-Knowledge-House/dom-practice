@@ -7,29 +7,51 @@ let quotes = [
   `It don't matter if you win by an inch or a mile. Winning's winning.`,
 ];
 
-window.onload =  function(event) {
-  
+window.onload = function (event) {
+
   // Random quote of the day generator
-  const randomQuote = function() {
-    document.querySelector('#quote-of-the-day').textContent = `"${
-      quotes[Math.floor(Math.random() * quotes.length)]
-    }"`;
+  const randomQuote = function () {
+    document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]
+      }"`;
   };
   randomQuote();
 
   // Do all of your work inside the window.onload function (in other words, here!)
-
   // Part 1
+  let changeHEader = document.getElementById('main-title');
+  changeHEader.textContent = "Fast and Furious stuff";
 
   // Part 2
+  document.body.style.backgroundColor = 'lightpink';
 
   // Part 3
-
+  let favs = document.querySelector('li:last-child');
+  favs.parentElement.removeChild(favs);
   // Part 4
-
-  // Part 5
-
+  let elements = document.querySelectorAll('.special-title');
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.fontSize = "1em";
+  }
+  // Part 5:
+  let parent = document.getElementById('past-races');
+  let child = parent.getElementsByTagName('li')[3];
+  let removed = parent.removeChild(child);
   // Part 6
-
+  let ul = document.getElementById('past-races');
+  let newLi = document.createElement('li');
+  newLi.appendChild(document.createTextNode('New York'));
+  ul.appendChild(newLi); //this will append(add) newLi to my ul element
   // Part 7
+  let mainDiv = document.getElementsByClassName('blog-post purple');
+  let div = document.createElement('div');
+  let h1 = document.createElement('h1');
+  let p = document.createElement('p');
+  let color = document.querySelector('.main');
+  div.className = 'blog-post purple';
+  h1.textContent = 'New York';
+  p.textContent = 'I destroyed all of my friends cars wronnn wronnnn!';
+  div.appendChild(h1)
+  div.appendChild(p);
+  color.appendChild(div);
+
 }
