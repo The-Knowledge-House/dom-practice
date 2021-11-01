@@ -24,7 +24,7 @@ window.onload = function(event) {
 	document.body.style.backgroundColor = '#689933';
 	// Part 3
 	let lastChild = document.querySelector('ul');
-	// console.log(lastChild.removeChild(lastChild.lastElementChild));
+	lastChild.removeChild(lastChild.lastElementChild);
 	// Part 4
 	let allTitle = document.querySelectorAll('.special-title');
 	allTitle.forEach((i) => (i.style.fontSize = '2rem'));
